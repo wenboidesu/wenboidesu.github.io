@@ -768,3 +768,188 @@ a {
         order: 1;
     }
 }
+
+
+/* ===== Mobile Layout Fix ===== */
+@media (max-width: 768px) {
+    body {
+        padding-inline: 16px;
+    }
+
+    /* Keep the logo and buttons aligned in one row */
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px 0;
+        background-color: var(--page-bg);
+    }
+
+    .navbar .logo {
+        flex: 1;
+        min-width: 0;
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    #menu-toggle {
+        display: inline-flex;
+        order: 2;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+    }
+
+    #theme-toggle {
+        display: inline-flex;
+        order: 3;
+        flex-shrink: 0;
+        min-width: 42px;
+        min-height: 42px;
+        padding: 8px;
+    }
+
+    #theme-label {
+        display: none;
+    }
+
+    /* Show navigation as a dropdown */
+    .navbar nav,
+    .navbar.compact nav {
+        display: none;
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        right: 0;
+        z-index: 1001;
+        width: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 10px;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar nav.open,
+    .navbar.compact nav.open {
+        display: flex;
+    }
+
+    .navbar nav a {
+        display: block;
+        width: 100%;
+        padding: 11px 14px;
+        text-align: center;
+    }
+
+    .navbar.compact {
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 8px 0;
+    }
+
+    .navbar.compact .logo {
+        font-size: 16px;
+    }
+
+    /* Make the hero fit smaller screens */
+    .hero {
+        min-height: calc(100svh - 60px);
+        padding: 60px 10px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.1rem, 8vw, 3.5rem);
+        overflow-wrap: break-word;
+    }
+
+    .typing-line {
+        max-width: 100%;
+        font-size: 1rem;
+        overflow-wrap: anywhere;
+    }
+
+    /* Shrink and separate the decorative circles */
+    .shape-one {
+        width: 170px;
+        height: 170px;
+        top: 10%;
+        left: -65px;
+    }
+
+    .shape-two {
+        width: 90px;
+        height: 90px;
+        right: -20px;
+        bottom: 17%;
+    }
+
+    .shape-three {
+        width: 65px;
+        height: 65px;
+        left: 14%;
+        bottom: 5%;
+    }
+
+    .shape-four {
+        width: 30px;
+        height: 30px;
+        top: 18%;
+        left: auto;
+        right: 17%;
+    }
+
+    .hero-shape {
+        opacity: 0.22;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-photo .profile-photo {
+        max-width: min(260px, 100%);
+    }
+
+    .about-section h2,
+    .skills-section h2 {
+        font-size: clamp(2rem, 8vw, 2.6rem);
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        padding-inline: 12px;
+    }
+
+    .navbar .logo {
+        font-size: 16px;
+    }
+
+    #menu-toggle,
+    #theme-toggle {
+        min-width: 38px;
+        min-height: 38px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
