@@ -46,7 +46,7 @@ backToTopButton.addEventListener("click", function () {
 
 const progressBar = document.getElementById("scroll-progress");
 
-window.addEventListener("scroll", function () {
+function updateScrollProgress() {
     const scrollableHeight =
         document.documentElement.scrollHeight - window.innerHeight;
 
@@ -54,7 +54,9 @@ window.addEventListener("scroll", function () {
         (window.scrollY / scrollableHeight) * 100;
 
     progressBar.style.width = scrollProgress + "%";
-});
+}
+
+window.addEventListener("scroll", updateScrollProgress);
 
 const revealElements = document.querySelectorAll(
     ".section, .placeholder-section"
@@ -138,11 +140,20 @@ menuToggle.addEventListener("click", function () {
 });
 
 navigation.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (event) {
         navigation.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
         menuToggle.setAttribute("aria-label", "Open navigation menu");
         menuToggle.textContent = "☰";
+
+        if (link.getAttribute("href") === "#home") {
+            event.preventDefault();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
     });
 });
 // ===== Feature 8: Active Navigation Highlight =====
@@ -196,7 +207,8 @@ const typingText = document.getElementById("typing-text");
 const typingPhrases = [
     "Multimedia Computing Student",
     "Aspiring Front-End Developer",
-    "Lifelong Learner"
+    "Beginner-Advanced in Music",
+	"Casual Gamer"
 ];
 
 let phraseIndex = 0;
@@ -233,20 +245,19 @@ function typeEffect() {
 
 typeEffect();
 
-/* Feature 11: Compact Mobile Navigation */
+// Feature 11: Compact Navigation
 const navbar = document.querySelector(".navbar");
 
-function updateMobileNavbar() {
-    if (window.innerWidth <= 768 && window.scrollY > 50) {
+function updateNavbar() {
+    if (window.scrollY > 50) {
         navbar.classList.add("compact");
     } else {
         navbar.classList.remove("compact");
     }
 }
 
-window.addEventListener("scroll", updateMobileNavbar);
-window.addEventListener("resize", updateMobileNavbar);
+window.addEventListener("scroll", updateNavbar);
+window.addEventListener("resize", updateNavbar);
 
-updateMobileNavbar();
-
+updateNavbar();
 
