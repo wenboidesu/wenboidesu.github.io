@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <title>Owenn's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 <body>
     <div id="scroll-progress"></div>
     <header class="navbar">
-        <a href="#home" class="logo">MyPortfolio<span>.</span></a>
+        <a href="#home" class="logo">Personal Portfolio<span></span></a>
         
         <button id="menu-toggle"
                 type="button"
@@ -41,84 +41,72 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <p class="intro-label">HELLO, WORLD! I'M</p>
 
-                <h1>Owenn <span>Wilfred</span></h1>
+        <section id="home" class="hero">
+
+            <!-- Decorative background shapes -->
+            <div class="hero-shape shape-one" aria-hidden="true"></div>
+            <div class="hero-shape shape-two" aria-hidden="true"></div>
+            <div class="hero-shape shape-three" aria-hidden="true"></div>
+            <div class="hero-shape shape-four" aria-hidden="true"></div>
+
+            <!-- Main introduction -->
+            <div class="hero-content">
+                <h1>Hello, I'm <span>Owenn.</span></h1>
+
                 <p class="typing-line">
                     I am a <span id="typing-text"></span><span class="typing-cursor">|</span>
                 </p>
-
-                <p class="hero-description">
-                    I'm a university student who enjoys exploring
-                    programming, web development, and multimedia design.
-                    I'm always learning and looking for opportunities
-                    to improve my skills.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">
-                        Explore My Work
-                    </a>
-
-                    <a href="#contact" class="btn-secondary">
-                        Contact Me
-                    </a>
-                </div>
             </div>
 
-            <div class="hero-card" aria-hidden="true">
-                <img src="images/profile.jpg"
-                     alt="Portrait of Wenn Wilfred"
-                     class="profile-photo">
-            </div>
         </section>
 
 
-        <section id="about" class="section">
+
+
+        <section id="about" class="section about-section">
             <h2>About Me</h2>
 
-            <h3>Curious by nature, always learning.</h3>
+            <div class="about-layout">
 
-            <p>
-                I'm Owenn Anak Wilfred, a Multimedia Computing student
-                at Universiti Malaysia Sarawak (UNIMAS).
-                I enjoy exploring different areas of technology,
-                especially programming, web development, and
-                multimedia design.
-            </p>
+                <div class="about-text">
 
-            <p>
-                I believe in learning through experimentation
-                and hands-on experience. Whether I'm exploring
-                a new programming language, working on a
-                university project, or developing my technical
-                skills, I see every experience as an opportunity
-                to grow.
-            </p>
+                    <p>
+                        I'm Owenn Anak Wilfred, a Multimedia Computing
+                        student at Universiti Malaysia Sarawak (UNIMAS).
+                        I enjoy exploring different things, especially
+                        when it comes to technology and programming.
+                    </p>
 
-            <p>
-                My interests include front-end web development
-                and cybersecurity. Outside of academics, I enjoy
-                gaming and playing guitar, which give me different
-                ways to explore my interests and creativity.
-            </p>
+                    <p>
+                        I'm still figuring out which direction I want
+                        to pursue, but I'm interested in front-end web
+                        development and cybersecurity. I enjoy learning
+                        new things, experimenting, and improving through
+                        hands-on experience.
+                    </p>
+
+                    <p>
+                        Outside of university, I spend most of my free
+                        time gaming. I also taught myself how to play
+                        guitar, although it's more of a casual hobby.
+                    </p>
+                </div>
+
+                <div class="about-photo">
+                    <img src="images/profile.jpg"
+                         alt="Photo of Owenn"
+                         class="profile-photo">
+                </div>
+
+            </div>
 
             <blockquote>
                 "Jack of all trades, master of none."
             </blockquote>
-
-            <p>
-                I'm interested in learning a little about many
-                things while continuing to develop my skills
-                and discover where I can excel.
-            </p>
         </section>
 
-
-
-        <section id="skills" class="section">
+        <section id="skills" class="section skills-section">
             <h2>My Skills</h2>
             <p class="section-description">
                 Technologies and tools I have been learning
@@ -138,8 +126,8 @@
                         More about this skill +
                     </button>
                     <p class="skill-details" hidden>
-                        I have learned C++ programming fundamentals
-                        and practised solving programming problems.
+                        Understanding of programming fundamentals, including
+                        variables, loops, functions, and basic problem-solving.
                     </p>
                 </div>
 
@@ -149,6 +137,15 @@
                     <div class="skill-bar">
                         <div class="skill-progress" data-level="60"></div>
                     </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Knowledge of HTML structure and elements for
+                        creating and organising web pages.
+                    </p>
                 </div>
 
                 <div class="skill-card">
@@ -157,6 +154,15 @@
                     <div class="skill-bar">
                         <div class="skill-progress" data-level="60"></div>
                     </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Understanding of object-oriented programming concepts,
+                        including classes, objects, inheritance, and methods.
+                    </p>
                 </div>
 
                 <div class="skill-card">
@@ -165,6 +171,15 @@
                     <div class="skill-bar">
                         <div class="skill-progress" data-level="30"></div>
                     </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Basic knowledge of Python syntax, programming
+                        fundamentals, and simple problem-solving.
+                    </p>
                 </div>
 
                 <div class="skill-card">
@@ -173,6 +188,15 @@
                     <div class="skill-bar">
                         <div class="skill-progress" data-level="60"></div>
                     </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Knowledge of JavaScript fundamentals for adding
+                        interactivity and dynamic behaviour to websites.
+                    </p>
                 </div>
 
                 <div class="skill-card">
@@ -181,6 +205,15 @@
                     <div class="skill-bar">
                         <div class="skill-progress" data-level="25"></div>
                     </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Basic understanding of programming fundamentals,
+                        including variables, conditions, loops, and functions.
+                    </p>
                 </div>
 
                 <div class="skill-card">
@@ -189,6 +222,15 @@
                     <div class="skill-bar">
                         <div class="skill-progress" data-level="60"></div>
                     </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Knowledge of database management and SQL commands,
+                        including SELECT, INSERT, UPDATE, and DELETE.
+                    </p>
                 </div>
             </div>
         </section>
