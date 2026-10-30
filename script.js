@@ -233,4 +233,20 @@ function typeEffect() {
 
 typeEffect();
 
+/* Feature 11: Compact Mobile Navigation */
+const navbar = document.querySelector(".navbar");
+
+function updateMobileNavbar() {
+    if (window.innerWidth <= 768 && window.scrollY > 50) {
+        navbar.classList.add("compact");
+    } else {
+        navbar.classList.remove("compact");
+    }
+}
+
+window.addEventListener("scroll", updateMobileNavbar);
+window.addEventListener("resize", updateMobileNavbar);
+
+updateMobileNavbar();
+
 
