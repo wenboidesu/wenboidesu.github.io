@@ -1,4 +1,4 @@
-﻿
+
 /* ===== General Styles ===== */
 * {
     margin: 0;
@@ -39,12 +39,16 @@ body.light-theme {
 
 /* ===== Body ===== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--page-bg);
     color: var(--text-main);
     line-height: 1.6;
     padding-inline: 48px;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 a {
@@ -199,16 +203,83 @@ a {
     }
 
 /* ===== Mobile Responsiveness ===== */
+
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 10px 5%;
+        transition: padding 0.3s ease;
     }
 
-        .navbar nav {
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px 18px;
+        .navbar .logo {
+            font-size: 20px;
+        }
+
+    #menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 10px;
+        font-size: 20px;
+    }
+
+    #theme-toggle {
+        padding: 6px;
+    }
+
+    /* Hide the text, keep the theme icon */
+    #theme-label {
+        display: none;
+    }
+
+    .navbar nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+        .navbar nav.open {
+            display: flex;
+        }
+
+    /* Compact navbar while scrolling */
+    .navbar.compact {
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 6px 4%;
+    }
+
+        .navbar.compact .logo {
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .navbar.compact #menu-toggle {
+            flex-shrink: 0;
+            padding: 4px 8px;
+            font-size: 17px;
+        }
+
+        .navbar.compact #theme-toggle {
+            flex-shrink: 0;
+            padding: 4px;
+        }
+
+        /* Keep the menu available without expanding the navbar */
+        .navbar.compact nav.open {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 12px 0;
+            background-color: var(--page-bg);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
     .hero {
@@ -224,6 +295,7 @@ a {
         min-width: 0;
     }
 }
+
 
 /* ===== Skills Section ===== */
 .section-description {
