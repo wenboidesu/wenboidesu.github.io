@@ -186,22 +186,8 @@ function updateActiveNavigation() {
 window.addEventListener("scroll", updateActiveNavigation);
 
 updateActiveNavigation();
-// ===== Feature 9: Copy Email Button =====
-const copyEmailButton = document.getElementById("copy-email");
-const contactEmail = document.getElementById("contact-email");
 
-copyEmailButton.addEventListener("click", async function () {
-    try {
-        await navigator.clipboard.writeText(
-            contactEmail.textContent.trim()
-        );
-
-        copyEmailButton.textContent = "✓ Email Copied!";
-    } catch (error) {
-        copyEmailButton.textContent = "Copy Failed — Select Email";
-    }
-});
-// ===== Feature 10: Typing Animation =====
+// ===== Feature 9: Typing Animation =====
 const typingText = document.getElementById("typing-text");
 
 const typingPhrases = [
@@ -245,7 +231,7 @@ function typeEffect() {
 
 typeEffect();
 
-// Feature 11: Compact Navigation
+// Feature 10: Compact Navigation
 const navbar = document.querySelector(".navbar");
 
 function updateNavbar() {
