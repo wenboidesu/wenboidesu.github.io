@@ -1,0 +1,432 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Owenn's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="scroll-progress"></div>
+    <header class="navbar">
+        <a href="#home" class="logo">Personal Portfolio<span></span></a>
+        
+        <button id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="theme-toggle"
+                type="button"
+                aria-label="Switch to light mode">
+            <span id="theme-icon" aria-hidden="true">☀</span>
+            <span id="theme-label">Light Mode</span>
+        </button>
+    </header>
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <!-- Decorative background shapes -->
+            <div class="hero-shape shape-one" aria-hidden="true"></div>
+            <div class="hero-shape shape-two" aria-hidden="true"></div>
+            <div class="hero-shape shape-three" aria-hidden="true"></div>
+            <div class="hero-shape shape-four" aria-hidden="true"></div>
+
+            <!-- Main introduction -->
+            <div class="hero-content">
+                <h1>Hello, I'm <span>Owenn.</span></h1>
+
+                <p class="typing-line">
+                    I am a <span id="typing-text"></span><span class="typing-cursor">|</span>
+                </p>
+            </div>
+
+        </section>
+
+
+
+
+        <section id="about" class="section about-section">
+            <h2>About Me</h2>
+
+            <div class="about-layout">
+
+                <div class="about-text">
+
+                    <p>
+                        I'm Owenn Anak Wilfred, a Multimedia Computing
+                        student at Universiti Malaysia Sarawak (UNIMAS).
+                        I enjoy exploring different things, especially
+                        when it comes to technology and programming.
+                    </p>
+
+                    <p>
+                        I'm still figuring out which direction I want
+                        to pursue, but I'm interested in front-end web
+                        development and cybersecurity. I enjoy learning
+                        new things, experimenting, and improving through
+                        hands-on experience.
+                    </p>
+
+                    <p>
+                        Outside of university, I spend most of my free
+                        time gaming. I also taught myself how to play
+                        guitar, although it's more of a casual hobby.
+                    </p>
+                </div>
+
+                <div class="about-photo">
+                    <img src="images/profile.jpg"
+                         alt="Photo of Owenn"
+                         class="profile-photo">
+                </div>
+
+            </div>
+
+            <blockquote>
+                "Jack of all trades, master of none."
+            </blockquote>
+        </section>
+
+        <section id="skills" class="section skills-section">
+            <h2>My Skills</h2>
+            <p class="section-description">
+                Technologies and tools I have been learning
+                and using throughout my studies.
+            </p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>C++</h3>
+                    <p>Familiar</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="70"></div>
+                    </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Understanding of programming fundamentals, including
+                        variables, loops, functions, and basic problem-solving.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Familiar</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Knowledge of HTML structure and elements for
+                        creating and organising web pages.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Java</h3>
+                    <p>Familiar</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Understanding of object-oriented programming concepts,
+                        including classes, objects, inheritance, and methods.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Python</h3>
+                    <p>Beginner</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="30"></div>
+                    </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Basic knowledge of Python syntax, programming
+                        fundamentals, and simple problem-solving.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Familiar</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Knowledge of JavaScript fundamentals for adding
+                        interactivity and dynamic behaviour to websites.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>C</h3>
+                    <p>Beginner</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="25"></div>
+                    </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Basic understanding of programming fundamentals,
+                        including variables, conditions, loops, and functions.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>MySQL</h3>
+                    <p>Familiar</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Knowledge of database management and SQL commands,
+                        including SELECT, INSERT, UPDATE, and DELETE.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h3>Figma</h3>
+                    <p>Familiar</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="80"></div>
+                    </div>
+                    <button class="skill-toggle"
+                            type="button"
+                            aria-expanded="false">
+                        More about this skill +
+                    </button>
+                    <p class="skill-details" hidden>
+                        Familiar with using Figma to create and design user
+                        interfaces (UI) and user experiences (UX), including
+                        layouts, prototypes, and interactive designs.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section">
+            <h2>My Projects</h2>
+            <p class="section-description">
+                My academic projects and practical work.
+            </p>
+
+            <div class="projects-container">
+
+                <!-- PROJECT 1: SARAWAK METRO KUTS -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/uiux.png"
+                             alt="Sarawak Metro KUTS UI/UX Design">
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Sarawak Metro KUTS UI/UX Design</h3>
+
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>UI/UX Design</span>
+                            <span>Group Project</span>
+                        </div>
+
+                        <p>
+                            Designed interface concepts for a public transportation
+                            application, focusing on navigation, layout, and usability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: DATABASE MANAGEMENT SYSTEM -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/sql.png"
+                             alt="Database Management System">
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Database Management System</h3>
+
+                        <div class="project-tags">
+                            <span>MySQL</span>
+                            <span>PHP</span>
+                            <span>XAMPP</span>
+                        </div>
+
+                        <p>
+                            Worked with a relational database using MySQL and
+                            phpMyAdmin through XAMPP, performing basic database
+                            operations and managing records.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: SPACE CLEANUP DEFENDER -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/game.png"
+                             alt="Space Cleanup Defender game">
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Space Cleanup Defender</h3>
+
+                        <div class="project-tags">
+                            <span>C++</span>
+                            <span>OpenGL</span>
+                            <span>FreeGLUT</span>
+                        </div>
+
+                        <p>
+                            Developed a 2D arcade-style shooting game featuring
+                            player movement, shooting mechanics, enemy spawning,
+                            collision detection, scoring, and level progression.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4: CAMPUS GUIDE APP -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mobile.png"
+                             alt="Campus Guide Android application">
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Campus Guide Android App</h3>
+
+                        <div class="project-tags">
+                            <span>Kotlin</span>
+                            <span>Android Studio</span>
+                            <span>Android Intents</span>
+                        </div>
+
+                        <p>
+                            Developed an Android campus guide application that allows
+                            users to view campus venues, add notes, and share venue
+                            information using Android Intents.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5: TIC-TAC-TOE -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/java.png"
+                             alt="Java Tic-Tac-Toe game interface">
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Tic-Tac-Toe GUI</h3>
+
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Java Swing</span>
+                            <span>GUI Development</span>
+                        </div>
+
+                        <p>
+                            Developed a graphical Tic-Tac-Toe game featuring
+                            player-versus-computer gameplay, random computer moves,
+                            win and draw detection, and automatic board resets.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <h2>Get In Touch</h2>
+
+            <p class="section-description">
+                Have a question or an opportunity?
+                Feel free to reach out. I'd be happy to connect!
+            </p>
+
+            <div class="contact-container">
+
+                <!-- EMAIL -->
+                <a href="mailto:owennwilfred22@gmail.com"
+                   class="contact-card">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <h3>Email</h3>
+                    <p>owennwilfred22@gmail.com</p>
+                </a>
+
+                <!-- LINKEDIN -->
+                <a href=https://www.linkedin.com/in/owenn-wilfred-457492346/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-card">
+
+                    <i class="fab fa-linkedin"></i>
+
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <button id="back-to-top"
+            type="button"
+            aria-label="Scroll back to top">
+        ↑
+    </button>
+
+</body>
+</html>
